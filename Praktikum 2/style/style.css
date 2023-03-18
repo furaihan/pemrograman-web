@@ -17,3 +17,13 @@ tbody tr td{
     margin: 1px;
     font-weight: bold;
 }
+.Buku{
+    background-color: #ecc919;
+    color: #000;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    text-transform: lowercase;
+    margin: 1px;
+    width: 195px;
+    font-weight: bold;
+}
