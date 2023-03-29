@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 4 - JS Lanjut</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 id="canva"></h1>
+    <h1 id="tahun"></h1>
+    <h1 id="milisekon"></h1>
+    <h1 id="math"></h1>
+    <h1 class="text"></h1>
+    <h1 class="text"></h1>
+    <h1 class="nama"></h1>
+    <h1 class="namaUmur"></h1>
+    <h1 class="operator"></h1>
+    <div class="calculator">
+        <form>
+            <!-- TODO -->
+            <select id="operator" class="operatorSelector">
+                <option value="tambah">+</option>
+                <option value="kurang">-</option>
+                <option value="kali">x</option>
+                <option value="bagi">/</option>
+        </form>
+    </div>
+    <script>
+        //------------------------Menggunakan Object Date------------------------//
+        //membuat variabel tanggal
+        const tanggal = new Date();
+        //menampilkan tanggal di object document dengan selektor id canva
+        document.getElementById("canva").innerHTML = tanggal;
+        //menampilkan tahun di object document dengan selektor id tahun
+        document.getElementById("tahun").innerHTML = tanggal.getFullYear();
+        //menampilkan milisekon di object document dengan selektor id milisekon
+        document.getElementById("milisekon").innerHTML = tanggal.getMilliseconds();
+
+        //------------------------Menggunakan Object Math------------------------//
+
+        //buat variabel planck constant
+        let planck = 6.62607015;
+        //tampilkan bilangan pecahan di object document dengan selektor id math
+        document.getElementById("math").innerHTML = "Bilangan " + planck + " dibulatkan = " + Math.ceil(planck);
+
+        //buat variable konstant
+        let konstant = Math.PI;
+        document.getElementById("math").innerHTML += "<br><br>Nilai PI = " + konstant;
+
+        //------------------------Menggunakan Object String------------------------//
+        const teks = "Hello World!";
+        //menampilkan teks di object document dengan selektor class text
+        document.getElementsByClassName("text")[1].innerHTML = teks.toLowerCase();
+
+        document.querySelector('.text').innerHTML = teks.toUpperCase();
+
+        //------------------------Menggunakan Object Array------------------------//
+        let data_nama = ["Ferdy Sambo", "Puan Maharani", "Jhonny G Plate"];
+        document.getElementsByClassName("nama")[0].innerHTML = data_nama.join(', ');
+        //array multidimensi
+        let data_multi = [
+            ["Ferdy Sambo", 55],
+            ["Puan Maharani", 57],
+            ["Jhonny G plate", 60]
+        ];
+        data_multi.forEach
+        document.querySelector('.namaUmur').innerHTML = data_multi[0][0] + " berumur " + data_multi[0][1] + " tahun";
+        //tampilkan seluruh data multi ke konsol
+        data_multi.forEach(function (item, index) {
+            console.log(item);
+        });
+
+
+        //------------------------Menggunakan Operator------------------------//
+        let bilangan1 = 78;
+        let bilangan2 = 56;
+        let hasil = bilangan1 * bilangan2;
+        document.querySelector('.operator').innerHTML = "Hasil dari " + bilangan1 + " x " + bilangan2 + " = " + hasil;
+
+    </script>
+</body>
+</html>
