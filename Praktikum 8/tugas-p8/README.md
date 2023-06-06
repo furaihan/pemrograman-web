@@ -14,6 +14,10 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ```sh
 npm install
+npm install bootstrap @popperjs/core
+npm install -D sass
+npm install @lottiefiles/lottie-player
+npm install jquery
 ```
 
 ### Compile and Hot-Reload for Development
