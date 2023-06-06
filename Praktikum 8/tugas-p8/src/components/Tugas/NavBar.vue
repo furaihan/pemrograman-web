@@ -1,7 +1,18 @@
+<script setup>
+
+</script>
+
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">
+        <img
+          src="/halal.png"
+          alt="logo"
+          width="30"
+          height="24"
+        />
+      </a>
       <button
         class="navbar-toggler"
         type="button"
