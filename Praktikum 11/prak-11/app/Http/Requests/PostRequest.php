@@ -16,16 +16,16 @@ class PostRequest extends FormRequest
     {
         return [
             // Validasi aturan untuk 'judul' (string dengan maksimal 255 karakter)
-            'judul' => ['string', 'max:255'],
+            'title' => ['string', 'max:255'],
 
             // Validasi aturan untuk 'kategori' (string dengan maksimal 255 karakter)
-            'kategori' => ['string', 'max:255'],
+            'category' => ['string', 'max:255'],
 
             // Validasi aturan untuk 'konten' (string dengan maksimal 255 karakter)
-            'konten' => ['string', 'max:255'],
+            'content' => ['string', 'max:255'],
 
             // Validasi aturan untuk 'penulis' (string dengan maksimal 255 karakter)
-            'penulis' => ['string', 'max:255'],
+            'author' => ['string', 'max:255'],
         ];
     }
 }

@@ -6,19 +6,20 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
 import TextInput from "@/Components/TextInput.vue";
 import { useForm, usePage } from "@inertiajs/vue3";
 
-defineProps({
+const props = defineProps({
     status: {
         type: String,
     },
+    post: Object,
 });
 const form = useForm({
-    title: "",
-    category: "",
-    content: "",
-    author: "",
+    title: props.post.title,
+    category: props.post.category,
+    content: props.post.content,
+    author: props.post.author,
 });
 const submit = () => {
-    form.post(route("posts.store"));
+    form.put(route("posts.update", props.post.id));
 };
 </script>
 <template>
@@ -39,7 +40,6 @@ const submit = () => {
                     >
                         <div>
                             <InputLabel for="title" value="title" />
-
                             <TextInput
                                 id="title"
                                 type="text"
@@ -100,7 +100,7 @@ const submit = () => {
                                 type="text"
                                 class="mt-1 block w-full"
                                 v-model="form.author"
-                                requiAred
+                                required
                                 autocomplete="off"
                             />
 
