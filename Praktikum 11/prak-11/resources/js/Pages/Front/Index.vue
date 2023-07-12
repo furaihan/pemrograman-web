@@ -278,11 +278,23 @@ const props = defineProps({
             <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
                 <div v-for="item in skill" :key="item.id">
                     <div class="flex items-end justify-between">
-                        <h4
-                            class="font-body font-semibold uppercase text-black"
-                        >
-                            {{ item.title }}
-                        </h4>
+                        <div class="flex flex-row">
+                            <!-- Check if item has icon properties and not empty -->
+                            <template v-if="item.icon && item.icon !== ''">
+                                <div class="mr-2">
+                                    <img
+                                        :src="item.icon"
+                                        class="w-8 h-8"
+                                        alt="icon"
+                                    />
+                                </div>
+                            </template>
+                            <h4
+                                class="font-body font-semibold uppercase text-black"
+                            >
+                                {{ item.title }}
+                            </h4>
+                        </div>
                         <h3 class="font-body text-3xl font-bold text-primary">
                             {{ item.content }}%
                         </h3>
