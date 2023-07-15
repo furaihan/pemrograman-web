@@ -7,4 +7,4 @@ Repository ini berisi source code dari website profile yang dibuat menggunakan f
 [https://zhafar.site](https://zhafar.site)
 
 ## Informasi Server
-Website ini dihosting menggunakan server VPS di [Microsoft Azure](https://azure.microsoft.com/en-us/). Server ini menggunakan sistem operasi Ubuntu 22.04 LTS dan menggunakan web server Nginx. Untuk database, website ini menggunakan database MySQL dan dihosting di (HostDDNS)[https://www.hostddns.us/].
+Website ini dihosting menggunakan server VPS di [Microsoft Azure](https://azure.microsoft.com/en-us/). Server ini menggunakan sistem operasi Ubuntu 22.04 LTS dan menggunakan web server Nginx. Untuk database, website ini menggunakan database MySQL dan dihosting di [HostDDNS](https://www.hostddns.us/).
